@@ -82,3 +82,19 @@ let orders = [
 ];
 
 // Start coding here
+let Most_Expensive_Order = 0;
+let Most_id_Expensiveorder = 0;
+for (let i = 0; i < orders.length; i++) {
+  if (
+    Most_Expensive_Order <
+    orders[i].productPrice * orders[i].productQuantity
+  ) {
+    Most_Expensive_Order = orders[i].productPrice * orders[i].productQuantity;
+    orders[i].id === Most_Expensive_Order;
+    Most_id_Expensiveorder = orders[i].id;
+  }
+}
+
+console.log(
+  `The most expensive order is order id ${Most_id_Expensiveorder} (${Most_Expensive_Order} Bath)`
+);
