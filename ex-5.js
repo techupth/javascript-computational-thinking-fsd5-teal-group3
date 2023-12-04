@@ -83,7 +83,7 @@ let orders = [
 
 // Nam : solution
 
-let maxPrice = orders[0].productPrice;
+/* let maxPrice = orders[0].productPrice;
 let idProduct;
 for (let i = 0; i < orders.length; i++) {
   //ให้หา product ที่ราคาสูงที่สุดค่อยเอาไปคูณกับจำนวน quantity
@@ -97,5 +97,22 @@ console.log(
     idProduct +
     "(" +
     maxPrice.toLocaleString() +
+    " Baht)"
+);*/
+
+let totalMaxPrice = orders[0].productPrice * orders[0].productQuantity;
+let idMaxProduct;
+for (let i = 0; i < orders.length; i++) {
+  if (totalMaxPrice < orders[i].productPrice * orders[i].productQuantity) {
+    totalMaxPrice = orders[i].productPrice * orders[i].productQuantity;
+    idMaxProduct = orders[i].id;
+  }
+}
+
+console.log(
+  "The most expensive order is order id " +
+    idMaxProduct +
+    "(" +
+    totalMaxPrice.toLocaleString() +
     " Baht)"
 );
