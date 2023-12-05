@@ -81,4 +81,18 @@ let orders = [
   },
 ];
 
-// Start coding here
+// Nam : solution
+
+let birdieTotal;
+for (let i = 0; i < orders.length; i++) {
+  if (orders[i].id === 6) {
+    birdieTotal = orders[5].productPrice * orders[5].productQuantity;
+  }
+}
+console.log(
+  "Total paid amount of " +
+    orders[5].customerName +
+    ": " +
+    birdieTotal.toLocaleString() +
+    " Bath"
+);
