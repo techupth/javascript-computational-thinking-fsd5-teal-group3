@@ -82,12 +82,12 @@ let orders = [
 ];
 
 // Nam : solution
+let totalAmount = 0;
 
-let totalJCB = 0;
 for (let i = 0; i < orders.length; i++) {
   if (orders[i].creditCardType == "jcb") {
-    totalJCB = totalJCB + orders[i].productPrice;
+    totalAmount += orders[i].productPrice * orders[i].productQuantity;
   }
 }
 
-console.log("Paid by JCB credit card amount: " + totalJCB.toLocaleString());
+console.log("Paid by JCB credit card amount: " + totalAmount.toLocaleString());

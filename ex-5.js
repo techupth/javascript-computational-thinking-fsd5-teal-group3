@@ -112,7 +112,7 @@ for (let i = 0; i < orders.length; i++) {
 console.log(
   "The most expensive order is order id " +
     idMaxProduct +
-    "(" +
+    " (" +
     totalMaxPrice.toLocaleString() +
     " Baht)"
 );
